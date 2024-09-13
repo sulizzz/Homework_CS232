@@ -32,10 +32,16 @@ int main(int argc, const char** argv){
 
         for (int i = lowerBound + 1; i <= upperBound; i++) {
             int prime = 1;
+
             for (int j = i - 1; j > 1; j--) {
+
                 if (i % j == 0) {
                     prime = 0;
                 }
+            }
+            if (i==1)
+            {
+                prime=1;
             }
 
             if (prime) {
